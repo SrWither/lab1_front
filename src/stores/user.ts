@@ -1,10 +1,10 @@
 import { defineStore } from 'pinia'
-import type { User } from '@/api/users'
+import type { Usuario } from '@/api/types'
 
 export const UserStore = defineStore('user', {
-  state: (): { user: User | null } => ({ user: null }),
+  state: (): { user: Usuario | null } => ({ user: null }),
   actions: {
-    setUser(user: User): void {
+    setUser(user: Usuario): void {
       this.user = user
     },
 
