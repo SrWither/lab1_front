@@ -5,7 +5,7 @@
       :value="modelValue"
       @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
       :placeholder="label"
-      class="w-full px-3 py-2 rounded-xl outline-none text-sm bg-black text-white dark:bg-white dark:text-black transition-all duration-200 ease-out placeholder:opacity-50"
+      class="w-full px-3 py-2 rounded-xl outline-none text-sm bg-black text-white dark:bg-white dark:text-black border-2 border-white dark:border-black transition-all duration-200 ease-out placeholder:opacity-50"
     />
   </div>
 </template>

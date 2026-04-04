@@ -1,14 +1,14 @@
 <template>
   <nav
-    class="w-full px-6 py-3 flex items-center justify-between bg-black text-white dark:bg-white dark:text-black transition-all duration-200 ease-out"
+    class="w-full px-6 py-3 flex flex-col md:flex-row items-center md:justify-between bg-black text-white dark:bg-white dark:text-black transition-all duration-200 ease-out"
   >
     <!-- Title -->
-    <div class="text-lg font-medium tracking-tight">
+    <div class="text-lg font-medium tracking-tight text-center md:text-left">
       {{ title }}
     </div>
 
     <!-- Links -->
-    <div class="flex items-center gap-2">
+    <div class="flex flex-wrap justify-center gap-2 mt-2 md:mt-0 md:justify-end w-full md:w-auto">
       <RouterLink
         v-for="item in items"
         :key="item.path"

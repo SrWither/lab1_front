@@ -2,7 +2,7 @@
   <div class="relative flex flex-col gap-1">
     <button
       @click="open = !open"
-      class="flex justify-between items-center px-3 py-2 rounded-xl text-sm bg-black text-white dark:bg-white dark:text-black transition-all duration-200 ease-out"
+      class="flex justify-between items-center px-3 py-2 rounded-xl text-sm bg-black text-white dark:bg-white dark:text-black transition-all duration-200 ease-out border-2 border-white dark:border-black"
     >
       <span
         :class="['transition-opacity duration-200', selectedLabel ? 'opacity-90' : 'opacity-50']"

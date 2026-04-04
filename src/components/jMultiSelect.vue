@@ -2,7 +2,7 @@
   <div class="relative flex flex-col gap-1">
     <div
       @click="open = !open"
-      class="rounded-xl px-3 py-2 flex items-center gap-2 cursor-pointer bg-black text-white dark:bg-white dark:text-black transition-all duration-200 ease-out"
+      class="rounded-xl px-3 py-2 flex items-center gap-2 cursor-pointer bg-black text-white dark:bg-white dark:text-black transition-all duration-200 ease-out border-2 border-white dark:border-black"
     >
       <div class="flex flex-wrap gap-2 flex-1">
         <span
