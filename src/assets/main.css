@@ -1,5 +1,8 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 * {
   font-family: 'Roboto', sans-serif;
+  @apply transition-all;
 }
