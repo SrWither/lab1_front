@@ -6,6 +6,8 @@ import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 import 'material-icons/iconfont/material-icons.css'
 
+import 'primeicons/primeicons.css'
+
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
