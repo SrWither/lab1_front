@@ -3,6 +3,7 @@ import authMiddleware from '@/middlewares/auth'
 
 import HomeView from '@/views/HomeView.vue'
 import ComponentsView from '@/views/ComponentsView.vue'
+import CreditsView from '@/views/CreditsView.vue'
 
 // Auth
 import RegisterView from '@/views/auth/RegisterView.vue'
@@ -45,6 +46,7 @@ const router = createRouter({
     { path: '/catalogo', name: 'catalogo', component: CatalogoView },
     { path: '/mi-lista', name: 'mi-lista', component: MiListaView },
     { path: '/settings', name: 'settings', component: SettingsView },
+    { path: '/credits', name: 'credits', component: CreditsView },
   ],
 })
 

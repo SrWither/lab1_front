@@ -17,9 +17,9 @@ const router = useRouter()
 const appReady = ref(false)
 
 const items = [
-  { label: 'GitHub', href: 'https://github.com', icon: 'code' },
-  { label: 'Docs', href: '#', icon: 'description' },
-  { label: 'Contacto', href: '#', icon: 'mail' },
+  { label: 'Código', href: 'https://github.com/SrWither/lab1_front', icon: 'code' },
+  { label: 'Creditos', href: '/credits', icon: 'star', route: true },
+  { label: 'Componentes', href: '/components', icon: 'widgets', route: true },
 ]
 
 const navbarItems = computed(() => {

@@ -5,7 +5,8 @@ import ToastStore from '@/stores/toast'
 import { AuthStore } from '@/stores/auth'
 import { UserStore } from '@/stores/user'
 
-import { type LoginAuthRequest, loginAuth, setAuthToken } from '@/api/auth'
+import { loginAuth, setAuthToken } from '@/api/auth'
+import { type AuthLoginRequest } from '@/api/types'
 import { getCurrentUser } from '@/api/users'
 
 import JBtn from '@/components/jBtn.vue'
@@ -17,7 +18,7 @@ const router = useRouter()
 const auth = AuthStore()
 const user = UserStore()
 
-const form = reactive<LoginAuthRequest>({
+const form = reactive<AuthLoginRequest>({
   username: '',
   password: '',
 })

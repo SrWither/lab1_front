@@ -8,18 +8,28 @@
 
       <!-- Right -->
       <div class="flex items-center gap-4">
-        <a
-          v-for="item in items"
-          :key="item.label"
-          :href="item.href"
-          target="_blank"
-          class="flex items-center gap-1 text-sm opacity-70 hover:opacity-100 transition-all duration-200"
-        >
-          <span v-if="item.icon" class="material-icons text-base">
-            {{ item.icon }}
-          </span>
-          <span>{{ item.label }}</span>
-        </a>
+        <template v-for="item in items" :key="item.label">
+          <!-- Ruta interna -->
+          <router-link
+            v-if="item.route"
+            :to="item.href"
+            class="flex items-center gap-1 text-sm opacity-70 hover:opacity-100 transition-all duration-200"
+          >
+            <span v-if="item.icon" class="material-icons text-base">{{ item.icon }}</span>
+            <span>{{ item.label }}</span>
+          </router-link>
+
+          <!-- Link externo -->
+          <a
+            v-else
+            :href="item.href"
+            target="_blank"
+            class="flex items-center gap-1 text-sm opacity-70 hover:opacity-100 transition-all duration-200"
+          >
+            <span v-if="item.icon" class="material-icons text-base">{{ item.icon }}</span>
+            <span>{{ item.label }}</span>
+          </a>
+        </template>
       </div>
     </div>
   </footer>
@@ -32,6 +42,7 @@ type FooterItem = {
   label: string
   href: string
   icon?: string
+  route?: boolean
 }
 
 type Props = {

@@ -4,13 +4,13 @@ import { getItemFromLocalStorage } from '@/utils/localStorage'
 const authMiddleware = async (to: RouteLocationNormalized, _from: RouteLocationNormalized) => {
   const token = getItemFromLocalStorage<string>('auth')
 
-  const isPublicRoute = to.path === '/login' || to.path === '/register' || to.path === '/components'
+  const isPublicRoute = ['/login', '/register', '/components', '/credits'].includes(to.path)
 
   if (!token && !isPublicRoute) {
     return '/login'
   }
 
-  if (token && isPublicRoute) {
+  if (token && (to.path === '/login' || to.path === '/register')) {
     return '/'
   }
 

@@ -1,4 +1,3 @@
-// types.ts
 export type Usuario = {
   id: number
   nombre: string
